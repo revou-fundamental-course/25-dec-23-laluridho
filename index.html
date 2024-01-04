@@ -1,26 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalkulator Segitiga</title>
-    <link rel="stylesheet" href="/25-dec-23-laluridho/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    
   </head>
   <body>
-    <header id="navigation-bar">
-      <h3 id="logo">Katik</h3>
-      <nav class="navigation">
-        <a href="">Luas Segitiga</a>
-        <a href="">Kelliling Segitiga</a>
-      </nav>
-    </header>
-    <section class="input-luas-section">
-      <label for="input-tinggi" id="label-tinggi">Tinggi</label>
-      <input type="number" id="input-tinggi" class="katik-input" />
-      <div class="button">
-        <button>Hitung</button>
-        <button>Reset</button>
+    <div class="container">
+      <button id="scrollToTopBtn" onclick="scrollToTop()">^</button>
+      <header id="navigation-bar">
+        <h1>Welcome to Katik</h1>
+        <p>Hai Sobat, Selamat datang di katik :]</p>
+        <p>
+          Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas
+          dan keliling bangun datar
+        </p>
+        <nav class="navigation">
+          <a href="#luas" class="luas">Luas Segitiga</a>
+          <a href="#keliling" class="keliling">Keliling Segitiga</a>
+        </nav>
+      </header>
+      <div class="conten">
+        <div id="luas">
+        <h2>Luas Segitiga</h2>
+        <img src="/asset/segitiga.jpeg" alt="gambar segitiga" />
+        <table>
+          <tr>
+            <td colspan="2">Dimana:</td>
+          </tr>
+          <tr>
+            <td>L=</td>
+            <td>Luas</td>
+          </tr>
+          <tr>
+            <td>a=</td>
+            <td>Panjang Alas</td>
+          </tr>
+          <tr>
+            <td>t=</td>
+            <td>Tinggi</td>
+          </tr>
+        </table>
+        <hr />
+        <h1 class="hitungluas">Hitung Luas Segitiga</h1>
+        <section class="input-luas-section">
+          <input id="nilai-alas" type="number" placeholder="Nilai Alas" />
+          <br />
+          <input
+            class="tinggi"
+            id="nilai-tinggi"
+            type="number"
+            placeholder="Nilai Tinggi"
+          />
+          <div class="button1">
+            <button id="hitung">Hitung</button>
+          </div>
+          <div class="button2">
+            <button id="reset" onclick="resetForm()">Reset</button>
+          </div>
+          <div id="output"></div>
+        </section>
+        </script>
+        </div>
+
+        <div id="keliling">
+          <h2>Keliling Segitiga</h2>
+          <img src="/asset/segitiga.jpeg" alt="gambar segitiga" />
+          <table>
+            <tr>
+              <td colspan="2">Dimana:</td>
+            </tr>
+            <tr>
+              <td>K=</td>
+              <td>Keliling</td>
+            </tr>
+            <tr>
+              <td>S1=</td>
+              <td>Sisi A</td>
+            </tr>
+            <tr>
+              <td>S2=</td>
+              <td>Sisi B</td>
+            </tr>
+            <tr>
+              <td>S3=</td>
+              <td>Sisi C</td>
+            </tr>
+          </table>
+          <hr />
+          <h1 class="hitungluas">Hitung Keliling Segitiga</h1>
+          <section class="input-keliling-section">
+            <input id="s1" type="number" placeholder="Sisi A" />
+            <br />
+            <input
+              class="s2"
+              id="s2"
+              type="number"
+              placeholder="Sisi B"
+            />
+            <input
+              class="s3"
+              id="s3"
+              type="number"
+              placeholder="Sisi C"
+            />
+            <div class="button1">
+              <button id="hitungKeliling">Hitung</button>
+            </div>
+            <div class="button2">
+              <button id="resetKeliling" onclick="resetKelilingButton()">Reset</button>
+            </div>
+            <div id="outputKeliling"></div>
+          </section>
+          
       </div>
-    </section>
+      </div>  
+    </div>
   </body>
+  <script src="/js/script.js"></script>
 </html>
